@@ -10,6 +10,6 @@ gcc -c -Wall -Wextra -Werror -pedantic main.c -o main.o
 gcc  main.o -o schedule
 >> ./schedule 
 Please specify a data file as first argument.
->> ./schedule instances/i6.dat 
+>> ./schedule instances/i6.dat
 Data file instances/i6.dat loaded; n: 6; w_max: 6.
 ```
