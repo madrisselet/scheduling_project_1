@@ -1,6 +1,8 @@
 #ifndef __MAIN_H__
 # define __MAIN_H__
 
+# define MAX_LINE_LENGTH	100	/* data file lines should not exceed this size */
+
 struct TASK
 {
 	unsigned int			id;	/* between 1 and n */
