@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -pedantic
 LDFLAGS=
-SOURCES=main.c
+SOURCES=main.c load_display_data.c
 HEADERS=main.h
 OBJECTS=$(SOURCES:.c=.o)
 NAME=schedule
