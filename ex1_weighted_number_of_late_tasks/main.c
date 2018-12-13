@@ -23,7 +23,7 @@ void load_data(char const filename[], unsigned int *n, struct TASK **task, unsig
 	*n = strtoul(line, NULL, 10);
 	*task = malloc((*n) * sizeof(struct TASK));
 
-	/* get all tasks */
+	/* get all tasks and compute w_max */
 	*w_max = 0;
 	for (i = 0; i < *n; i++)
 	{
@@ -31,12 +31,13 @@ void load_data(char const filename[], unsigned int *n, struct TASK **task, unsig
 
 		(*task)[i].id = i + 1; /* first task is number 1 */
 
+		/* process line into three numbers p,w,d */
 		(*task)[i].p = strtoul(line, &w_ptr, 10);
 		(*task)[i].w = strtoull(w_ptr, &d_ptr, 10);
 		(*task)[i].d = strtoul(d_ptr, NULL, 10);
 
 		if ((*task)[i].w > *w_max)
-			*w_max = (*task)[i].w;
+			*w_max = (*task)[i].w;		/* compute w_max */
 	}
 }
 
